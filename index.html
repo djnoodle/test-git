@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Hello World!</title>
-<link rel="stylesheet" href="bluestyle.css">
-</head>
-<body>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>En “variabel”</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div id="app">
+      <img
+        v-bind:src="picture"
+        :alt="`${firstName} ${lastName}`"
+        :class="gender"
+      />
+      <h1>{{firstName}} {{ lastName }}</h1>
+      <h3>Email: {{ email }}</h3>
+      <h3>Phone: {{ phone }}</h3>
+      <button :class="gender" @click="getUser()">Get Random User</button>
+    </div>
 
-<h1>Hello world!</h1>
-<div><img src="img_hello_world.jpg" alt="Hello World from Space"
-style="width:100%;max-width:960px"></div>
-<p>This is the first file in my new Git Repo.</p>
-<p>A new line in our file!</p>
+    <div id="shopping"></div>
 
-</body>
+    <!-- <div id="shoppingList">
+        <h1>{{ header || 'Welcome' }}</h1>
+        <div class="add-item-form">
+
+        </div>
+    </div> -->
+
+    <script src="index.js"></script>
+  </body>
 </html>
